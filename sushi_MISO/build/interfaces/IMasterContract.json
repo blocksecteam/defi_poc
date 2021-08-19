@@ -1,0 +1,131 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "init",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IMasterContract.sol",
+    "exportedSymbols": {
+      "IMasterContract": [
+        188
+      ]
+    },
+    "id": 189,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 181,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 188,
+        "linearizedBaseContracts": [
+          188
+        ],
+        "name": "IMasterContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 182,
+              "nodeType": "StructuredDocumentation",
+              "src": "57:258:6",
+              "text": "@notice Init function that gets called from `BoringFactory.deploy`.\n Also kown as the constructor for cloned contracts.\n Any ETH send to `BoringFactory.deploy` ends up here.\n @param data Can be abi encoded arguments or anything else."
+            },
+            "functionSelector": "4ddf47d4",
+            "id": 187,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "init",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 184,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 187,
+                  "src": "334:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 183,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:21:6"
+            },
+            "returnParameters": {
+              "id": 186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "371:0:6"
+            },
+            "scope": 188,
+            "src": "320:52:6",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 189,
+        "src": "25:349:6"
+      }
+    ],
+    "src": "0:374:6"
+  },
+  "contractName": "IMasterContract",
+  "dependencies": [],
+  "offset": [
+    25,
+    374
+  ],
+  "sha1": "7d09c0708b487383d3558cef05798dc3e78a3998",
+  "source": "pragma solidity 0.6.12;\n\ninterface IMasterContract {\n    /// @notice Init function that gets called from `BoringFactory.deploy`.\n    /// Also kown as the constructor for cloned contracts.\n    /// Any ETH send to `BoringFactory.deploy` ends up here.\n    /// @param data Can be abi encoded arguments or anything else.\n    function init(bytes calldata data) external payable;\n}",
+  "type": "interface"
+}

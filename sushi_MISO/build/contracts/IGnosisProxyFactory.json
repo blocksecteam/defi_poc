@@ -1,0 +1,241 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISafeGnosis",
+          "name": "masterCopy",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "createProxy",
+      "outputs": [
+        {
+          "internalType": "contract ISafeGnosis",
+          "name": "proxy",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "79": "contracts/interfaces/IGnosisProxyFactory.sol",
+    "92": "contracts/interfaces/ISafeGnosis.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IGnosisProxyFactory.sol",
+    "exportedSymbols": {
+      "IGnosisProxyFactory": [
+        30368
+      ]
+    },
+    "id": 30369,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 30357,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:79"
+      },
+      {
+        "absolutePath": "contracts/interfaces/ISafeGnosis.sol",
+        "file": "./ISafeGnosis.sol",
+        "id": 30358,
+        "nodeType": "ImportDirective",
+        "scope": 30369,
+        "sourceUnit": 30671,
+        "src": "24:27:79",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 30368,
+        "linearizedBaseContracts": [
+          30368
+        ],
+        "name": "IGnosisProxyFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "61b69abd",
+            "id": 30367,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createProxy",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 30363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30360,
+                  "mutability": "mutable",
+                  "name": "masterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 30367,
+                  "src": "118:22:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISafeGnosis_$30670",
+                    "typeString": "contract ISafeGnosis"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 30359,
+                    "name": "ISafeGnosis",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 30670,
+                    "src": "118:11:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISafeGnosis_$30670",
+                      "typeString": "contract ISafeGnosis"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30362,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 30367,
+                  "src": "142:17:79",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30361,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "142:5:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "108:52:79"
+            },
+            "returnParameters": {
+              "id": 30366,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30365,
+                  "mutability": "mutable",
+                  "name": "proxy",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 30367,
+                  "src": "178:17:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISafeGnosis_$30670",
+                    "typeString": "contract ISafeGnosis"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 30364,
+                    "name": "ISafeGnosis",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 30670,
+                    "src": "178:11:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISafeGnosis_$30670",
+                      "typeString": "contract ISafeGnosis"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "177:19:79"
+            },
+            "scope": 30368,
+            "src": "88:109:79",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 30369,
+        "src": "52:150:79"
+      }
+    ],
+    "src": "0:204:79"
+  },
+  "bytecode": "",
+  "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "IGnosisProxyFactory",
+  "coverageMap": {
+    "branches": {},
+    "statements": {}
+  },
+  "dependencies": [
+    "ISafeGnosis"
+  ],
+  "deployedBytecode": "",
+  "deployedSourceMap": "",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    52,
+    202
+  ],
+  "opcodes": "",
+  "pcMap": {},
+  "sha1": "7c51f61459353730ad55c520fb4df4907d02afe5",
+  "source": "pragma solidity 0.6.12;\nimport \"./ISafeGnosis.sol\";\ninterface IGnosisProxyFactory {\n    function createProxy(\n        ISafeGnosis masterCopy, bytes memory data) external returns(ISafeGnosis proxy);\n\n \n}\n\n",
+  "sourceMap": "",
+  "sourcePath": "contracts/interfaces/IGnosisProxyFactory.sol",
+  "type": "interface"
+}

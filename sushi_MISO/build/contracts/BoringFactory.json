@@ -1,0 +1,6446 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "masterContract",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "cloneAddress",
+          "type": "address"
+        }
+      ],
+      "name": "LogDeploy",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "masterContract",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bool",
+          "name": "useCreate2",
+          "type": "bool"
+        }
+      ],
+      "name": "deploy",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "cloneAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "masterContractOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "65": "contracts/Utils/BoringFactory.sol",
+    "80": "contracts/interfaces/IMasterContract.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Utils/BoringFactory.sol",
+    "exportedSymbols": {
+      "BoringFactory": [
+        27440
+      ]
+    },
+    "id": 27441,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 27361,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:23:65"
+      },
+      {
+        "absolutePath": "contracts/interfaces/IMasterContract.sol",
+        "file": "../interfaces/IMasterContract.sol",
+        "id": 27362,
+        "nodeType": "ImportDirective",
+        "scope": 27441,
+        "sourceUnit": 30378,
+        "src": "25:43:65",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 27440,
+        "linearizedBaseContracts": [
+          27440
+        ],
+        "name": "BoringFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 27370,
+            "name": "LogDeploy",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 27369,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27364,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "masterContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 27370,
+                  "src": "154:30:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27363,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27366,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 27370,
+                  "src": "186:10:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 27365,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "186:5:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27368,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "cloneAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 27370,
+                  "src": "198:28:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27367,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "198:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "153:74:65"
+            },
+            "src": "138:90:65"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 27371,
+              "nodeType": "StructuredDocumentation",
+              "src": "234:65:65",
+              "text": "@notice Mapping from clone contracts to their masterContract."
+            },
+            "functionSelector": "bafe4f14",
+            "id": 27375,
+            "mutability": "mutable",
+            "name": "masterContractOf",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 27440,
+            "src": "304:51:65",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+              "typeString": "mapping(address => address)"
+            },
+            "typeName": {
+              "id": 27374,
+              "keyType": {
+                "id": 27372,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "312:7:65",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "304:27:65",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                "typeString": "mapping(address => address)"
+              },
+              "valueType": {
+                "id": 27373,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "323:7:65",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 27438,
+              "nodeType": "Block",
+              "src": "1040:1516:65",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 27393,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 27388,
+                          "name": "masterContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 27378,
+                          "src": "1058:14:65",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 27391,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1084:1:65",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 27390,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1076:7:65",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 27389,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "1076:7:65",
+                              "typeDescriptions": {
+                                "typeIdentifier": null,
+                                "typeString": null
+                              }
+                            }
+                          },
+                          "id": 27392,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1076:10:65",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1058:28:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "426f72696e67466163746f72793a204e6f206d6173746572436f6e7472616374",
+                        "id": 27394,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1088:34:65",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ca263bb3a1d34921c755bbb7d563d78653106aed124fb087e2484c54b7a9af02",
+                          "typeString": "literal_string \"BoringFactory: No masterContract\""
+                        },
+                        "value": "BoringFactory: No masterContract"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_ca263bb3a1d34921c755bbb7d563d78653106aed124fb087e2484c54b7a9af02",
+                          "typeString": "literal_string \"BoringFactory: No masterContract\""
+                        }
+                      ],
+                      "id": 27387,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1050:7:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 27395,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1050:73:65",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 27396,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1050:73:65"
+                },
+                {
+                  "assignments": [
+                    27398
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 27398,
+                      "mutability": "mutable",
+                      "name": "targetBytes",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 27438,
+                      "src": "1133:19:65",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes20",
+                        "typeString": "bytes20"
+                      },
+                      "typeName": {
+                        "id": 27397,
+                        "name": "bytes20",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1133:7:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes20",
+                          "typeString": "bytes20"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 27403,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 27401,
+                        "name": "masterContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27378,
+                        "src": "1163:14:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 27400,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1155:7:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes20_$",
+                        "typeString": "type(bytes20)"
+                      },
+                      "typeName": {
+                        "id": 27399,
+                        "name": "bytes20",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1155:7:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": null,
+                          "typeString": null
+                        }
+                      }
+                    },
+                    "id": 27402,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1155:23:65",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes20",
+                      "typeString": "bytes20"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1133:45:65"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 27404,
+                    "name": "useCreate2",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 27382,
+                    "src": "1253:10:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 27414,
+                    "nodeType": "Block",
+                    "src": "1958:405:65",
+                    "statements": [
+                      {
+                        "AST": {
+                          "nodeType": "YulBlock",
+                          "src": "1981:372:65",
+                          "statements": [
+                            {
+                              "nodeType": "YulVariableDeclaration",
+                              "src": "1999:24:65",
+                              "value": {
+                                "arguments": [
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "2018:4:65",
+                                    "type": "",
+                                    "value": "0x40"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "mload",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "2012:5:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "2012:11:65"
+                              },
+                              "variables": [
+                                {
+                                  "name": "clone",
+                                  "nodeType": "YulTypedName",
+                                  "src": "2003:5:65",
+                                  "type": ""
+                                }
+                              ]
+                            },
+                            {
+                              "expression": {
+                                "arguments": [
+                                  {
+                                    "name": "clone",
+                                    "nodeType": "YulIdentifier",
+                                    "src": "2047:5:65"
+                                  },
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "2054:66:65",
+                                    "type": "",
+                                    "value": "0x3d602d80600a3d3981f3363d3d373d3d3d363d73000000000000000000000000"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "mstore",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "2040:6:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "2040:81:65"
+                              },
+                              "nodeType": "YulExpressionStatement",
+                              "src": "2040:81:65"
+                            },
+                            {
+                              "expression": {
+                                "arguments": [
+                                  {
+                                    "arguments": [
+                                      {
+                                        "name": "clone",
+                                        "nodeType": "YulIdentifier",
+                                        "src": "2149:5:65"
+                                      },
+                                      {
+                                        "kind": "number",
+                                        "nodeType": "YulLiteral",
+                                        "src": "2156:4:65",
+                                        "type": "",
+                                        "value": "0x14"
+                                      }
+                                    ],
+                                    "functionName": {
+                                      "name": "add",
+                                      "nodeType": "YulIdentifier",
+                                      "src": "2145:3:65"
+                                    },
+                                    "nodeType": "YulFunctionCall",
+                                    "src": "2145:16:65"
+                                  },
+                                  {
+                                    "name": "targetBytes",
+                                    "nodeType": "YulIdentifier",
+                                    "src": "2163:11:65"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "mstore",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "2138:6:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "2138:37:65"
+                              },
+                              "nodeType": "YulExpressionStatement",
+                              "src": "2138:37:65"
+                            },
+                            {
+                              "expression": {
+                                "arguments": [
+                                  {
+                                    "arguments": [
+                                      {
+                                        "name": "clone",
+                                        "nodeType": "YulIdentifier",
+                                        "src": "2203:5:65"
+                                      },
+                                      {
+                                        "kind": "number",
+                                        "nodeType": "YulLiteral",
+                                        "src": "2210:4:65",
+                                        "type": "",
+                                        "value": "0x28"
+                                      }
+                                    ],
+                                    "functionName": {
+                                      "name": "add",
+                                      "nodeType": "YulIdentifier",
+                                      "src": "2199:3:65"
+                                    },
+                                    "nodeType": "YulFunctionCall",
+                                    "src": "2199:16:65"
+                                  },
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "2217:66:65",
+                                    "type": "",
+                                    "value": "0x5af43d82803e903d91602b57fd5bf30000000000000000000000000000000000"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "mstore",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "2192:6:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "2192:92:65"
+                              },
+                              "nodeType": "YulExpressionStatement",
+                              "src": "2192:92:65"
+                            },
+                            {
+                              "nodeType": "YulAssignment",
+                              "src": "2301:38:65",
+                              "value": {
+                                "arguments": [
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "2324:1:65",
+                                    "type": "",
+                                    "value": "0"
+                                  },
+                                  {
+                                    "name": "clone",
+                                    "nodeType": "YulIdentifier",
+                                    "src": "2327:5:65"
+                                  },
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "2334:4:65",
+                                    "type": "",
+                                    "value": "0x37"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "create",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "2317:6:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "2317:22:65"
+                              },
+                              "variableNames": [
+                                {
+                                  "name": "cloneAddress",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "2301:12:65"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "evmVersion": "istanbul",
+                        "externalReferences": [
+                          {
+                            "declaration": 27385,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "2301:12:65",
+                            "valueSize": 1
+                          },
+                          {
+                            "declaration": 27398,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "2163:11:65",
+                            "valueSize": 1
+                          }
+                        ],
+                        "id": 27413,
+                        "nodeType": "InlineAssembly",
+                        "src": "1972:381:65"
+                      }
+                    ]
+                  },
+                  "id": 27415,
+                  "nodeType": "IfStatement",
+                  "src": "1249:1114:65",
+                  "trueBody": {
+                    "id": 27412,
+                    "nodeType": "Block",
+                    "src": "1265:687:65",
+                    "statements": [
+                      {
+                        "assignments": [
+                          27406
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 27406,
+                            "mutability": "mutable",
+                            "name": "salt",
+                            "nodeType": "VariableDeclaration",
+                            "overrides": null,
+                            "scope": 27412,
+                            "src": "1390:12:65",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            },
+                            "typeName": {
+                              "id": 27405,
+                              "name": "bytes32",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "1390:7:65",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes32",
+                                "typeString": "bytes32"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 27410,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 27408,
+                              "name": "data",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 27380,
+                              "src": "1415:4:65",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_calldata_ptr",
+                                "typeString": "bytes calldata"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_calldata_ptr",
+                                "typeString": "bytes calldata"
+                              }
+                            ],
+                            "id": 27407,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -8,
+                            "src": "1405:9:65",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 27409,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1405:15:65",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "1390:30:65"
+                      },
+                      {
+                        "AST": {
+                          "nodeType": "YulBlock",
+                          "src": "1563:379:65",
+                          "statements": [
+                            {
+                              "nodeType": "YulVariableDeclaration",
+                              "src": "1581:24:65",
+                              "value": {
+                                "arguments": [
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "1600:4:65",
+                                    "type": "",
+                                    "value": "0x40"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "mload",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "1594:5:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "1594:11:65"
+                              },
+                              "variables": [
+                                {
+                                  "name": "clone",
+                                  "nodeType": "YulTypedName",
+                                  "src": "1585:5:65",
+                                  "type": ""
+                                }
+                              ]
+                            },
+                            {
+                              "expression": {
+                                "arguments": [
+                                  {
+                                    "name": "clone",
+                                    "nodeType": "YulIdentifier",
+                                    "src": "1629:5:65"
+                                  },
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "1636:66:65",
+                                    "type": "",
+                                    "value": "0x3d602d80600a3d3981f3363d3d373d3d3d363d73000000000000000000000000"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "mstore",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "1622:6:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "1622:81:65"
+                              },
+                              "nodeType": "YulExpressionStatement",
+                              "src": "1622:81:65"
+                            },
+                            {
+                              "expression": {
+                                "arguments": [
+                                  {
+                                    "arguments": [
+                                      {
+                                        "name": "clone",
+                                        "nodeType": "YulIdentifier",
+                                        "src": "1731:5:65"
+                                      },
+                                      {
+                                        "kind": "number",
+                                        "nodeType": "YulLiteral",
+                                        "src": "1738:4:65",
+                                        "type": "",
+                                        "value": "0x14"
+                                      }
+                                    ],
+                                    "functionName": {
+                                      "name": "add",
+                                      "nodeType": "YulIdentifier",
+                                      "src": "1727:3:65"
+                                    },
+                                    "nodeType": "YulFunctionCall",
+                                    "src": "1727:16:65"
+                                  },
+                                  {
+                                    "name": "targetBytes",
+                                    "nodeType": "YulIdentifier",
+                                    "src": "1745:11:65"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "mstore",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "1720:6:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "1720:37:65"
+                              },
+                              "nodeType": "YulExpressionStatement",
+                              "src": "1720:37:65"
+                            },
+                            {
+                              "expression": {
+                                "arguments": [
+                                  {
+                                    "arguments": [
+                                      {
+                                        "name": "clone",
+                                        "nodeType": "YulIdentifier",
+                                        "src": "1785:5:65"
+                                      },
+                                      {
+                                        "kind": "number",
+                                        "nodeType": "YulLiteral",
+                                        "src": "1792:4:65",
+                                        "type": "",
+                                        "value": "0x28"
+                                      }
+                                    ],
+                                    "functionName": {
+                                      "name": "add",
+                                      "nodeType": "YulIdentifier",
+                                      "src": "1781:3:65"
+                                    },
+                                    "nodeType": "YulFunctionCall",
+                                    "src": "1781:16:65"
+                                  },
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "1799:66:65",
+                                    "type": "",
+                                    "value": "0x5af43d82803e903d91602b57fd5bf30000000000000000000000000000000000"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "mstore",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "1774:6:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "1774:92:65"
+                              },
+                              "nodeType": "YulExpressionStatement",
+                              "src": "1774:92:65"
+                            },
+                            {
+                              "nodeType": "YulAssignment",
+                              "src": "1883:45:65",
+                              "value": {
+                                "arguments": [
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "1907:1:65",
+                                    "type": "",
+                                    "value": "0"
+                                  },
+                                  {
+                                    "name": "clone",
+                                    "nodeType": "YulIdentifier",
+                                    "src": "1910:5:65"
+                                  },
+                                  {
+                                    "kind": "number",
+                                    "nodeType": "YulLiteral",
+                                    "src": "1917:4:65",
+                                    "type": "",
+                                    "value": "0x37"
+                                  },
+                                  {
+                                    "name": "salt",
+                                    "nodeType": "YulIdentifier",
+                                    "src": "1923:4:65"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "create2",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "1899:7:65"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "1899:29:65"
+                              },
+                              "variableNames": [
+                                {
+                                  "name": "cloneAddress",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "1883:12:65"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "evmVersion": "istanbul",
+                        "externalReferences": [
+                          {
+                            "declaration": 27385,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "1883:12:65",
+                            "valueSize": 1
+                          },
+                          {
+                            "declaration": 27406,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "1923:4:65",
+                            "valueSize": 1
+                          },
+                          {
+                            "declaration": 27398,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "1745:11:65",
+                            "valueSize": 1
+                          }
+                        ],
+                        "id": 27411,
+                        "nodeType": "InlineAssembly",
+                        "src": "1554:388:65"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27420,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 27416,
+                        "name": "masterContractOf",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27375,
+                        "src": "2372:16:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                          "typeString": "mapping(address => address)"
+                        }
+                      },
+                      "id": 27418,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 27417,
+                        "name": "cloneAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27385,
+                        "src": "2389:12:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "2372:30:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 27419,
+                      "name": "masterContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27378,
+                      "src": "2405:14:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2372:47:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 27421,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2372:47:65"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 27429,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27380,
+                        "src": "2483:4:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_calldata_ptr",
+                            "typeString": "bytes calldata"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 27423,
+                              "name": "cloneAddress",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 27385,
+                              "src": "2446:12:65",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 27422,
+                            "name": "IMasterContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 30377,
+                            "src": "2430:15:65",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_IMasterContract_$30377_$",
+                              "typeString": "type(contract IMasterContract)"
+                            }
+                          },
+                          "id": 27424,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2430:29:65",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IMasterContract_$30377",
+                            "typeString": "contract IMasterContract"
+                          }
+                        },
+                        "id": 27425,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "init",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 30376,
+                        "src": "2430:34:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_payable$_t_bytes_memory_ptr_$returns$__$",
+                          "typeString": "function (bytes memory) payable external"
+                        }
+                      },
+                      "id": 27428,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "names": [
+                        "value"
+                      ],
+                      "nodeType": "FunctionCallOptions",
+                      "options": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 27426,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "2472:3:65",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 27427,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "2472:9:65",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "src": "2430:52:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$_t_bytes_memory_ptr_$returns$__$value",
+                        "typeString": "function (bytes memory) payable external"
+                      }
+                    },
+                    "id": 27430,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2430:58:65",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 27431,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2430:58:65"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 27433,
+                        "name": "masterContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27378,
+                        "src": "2514:14:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 27434,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27380,
+                        "src": "2530:4:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 27435,
+                        "name": "cloneAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27385,
+                        "src": "2536:12:65",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 27432,
+                      "name": "LogDeploy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27370,
+                      "src": "2504:9:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bytes_memory_ptr_$_t_address_$returns$__$",
+                        "typeString": "function (address,bytes memory,address)"
+                      }
+                    },
+                    "id": 27436,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2504:45:65",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 27437,
+                  "nodeType": "EmitStatement",
+                  "src": "2499:50:65"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 27376,
+              "nodeType": "StructuredDocumentation",
+              "src": "362:519:65",
+              "text": "@notice Deploys a given master Contract as a clone.\n Any ETH transferred with this call is forwarded to the new clone.\n Emits `LogDeploy`.\n @param masterContract The address of the contract to clone.\n @param data Additional abi encoded calldata that is passed to the new clone via `IMasterContract.init`.\n @param useCreate2 Creates the clone by using the CREATE2 opcode, in this case `data` will be used as salt.\n @return cloneAddress Address of the created clone contract."
+            },
+            "functionSelector": "1f54245b",
+            "id": 27439,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deploy",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 27383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27378,
+                  "mutability": "mutable",
+                  "name": "masterContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 27439,
+                  "src": "911:22:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27377,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "911:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27380,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 27439,
+                  "src": "943:19:65",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 27379,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "943:5:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27382,
+                  "mutability": "mutable",
+                  "name": "useCreate2",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 27439,
+                  "src": "972:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 27381,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "972:4:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "901:92:65"
+            },
+            "returnParameters": {
+              "id": 27386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27385,
+                  "mutability": "mutable",
+                  "name": "cloneAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 27439,
+                  "src": "1018:20:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27384,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1018:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1017:22:65"
+            },
+            "scope": 27440,
+            "src": "886:1670:65",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 27441,
+        "src": "109:2449:65"
+      }
+    ],
+    "src": "1:2557:65"
+  },
+  "bytecode": "608060405234801561001057600080fd5b50610398806100206000396000f3fe6080604052600436106100295760003560e01c80631f54245b1461002e578063bafe4f14146100cc575b600080fd5b6100b06004803603606081101561004457600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561006f57600080fd5b82018360208201111561008157600080fd5b803590602001918460018302840111640100000000831117156100a357600080fd5b91935091503515156100ff565b604080516001600160a01b039092168252519081900360200190f35b3480156100d857600080fd5b506100b0600480360360208110156100ef57600080fd5b50356001600160a01b0316610347565b60006001600160a01b03851661015c576040805162461bcd60e51b815260206004820181905260248201527f426f72696e67466163746f72793a204e6f206d6173746572436f6e7472616374604482015290519081900360640190fd5b606085901b82156101d357600085856040518083838082843760405192018290038220733d602d80600a3d3981f3363d3d373d3d3d363d7360601b8352601483018890526e5af43d82803e903d91602b57fd5bf360881b60288401529550909350849250603791508390506000f593505050610218565b604051733d602d80600a3d3981f3363d3d373d3d3d363d7360601b81528160148201526e5af43d82803e903d91602b57fd5bf360881b60288201526037816000f09250505b6001600160a01b038281166000818152602081815260409182902080546001600160a01b031916948b169490941790935551631377d1f560e21b815260048101928352602481018790529091634ddf47d491349189918991908190604401848480828437600081840152601f19601f82011690508083019250505093505050506000604051808303818588803b1580156102b157600080fd5b505af11580156102c5573d6000803e3d6000fd5b5050505050816001600160a01b0316866001600160a01b03167fd62166f3c2149208e51788b1401cc356bf5da1fc6c7886a32e18570f57d88b3b878760405180806020018281038252848482818152602001925080828437600083820152604051601f909101601f19169092018290039550909350505050a350949350505050565b6000602081905290815260409020546001600160a01b03168156fea264697066735822122087a9825f30745d21cdb34c23cecdc6a664fdba205e68d41acac7ddc9c2e6b45164736f6c634300060c0033",
+  "bytecodeSha1": "a15382615e5a049b3a70f6b0ccfbdc5505bddf82",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "BoringFactory",
+  "coverageMap": {
+    "branches": {
+      "65": {
+        "BoringFactory.deploy": {
+          "5": [
+            1058,
+            1086,
+            true
+          ]
+        }
+      },
+      "80": {}
+    },
+    "statements": {
+      "65": {
+        "BoringFactory.deploy": {
+          "0": [
+            1050,
+            1123
+          ],
+          "1": [
+            1249,
+            2363
+          ],
+          "2": [
+            2372,
+            2419
+          ],
+          "3": [
+            2430,
+            2488
+          ],
+          "4": [
+            2499,
+            2549
+          ]
+        }
+      },
+      "80": {}
+    }
+  },
+  "dependencies": [
+    "IMasterContract"
+  ],
+  "deployedBytecode": "6080604052600436106100295760003560e01c80631f54245b1461002e578063bafe4f14146100cc575b600080fd5b6100b06004803603606081101561004457600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561006f57600080fd5b82018360208201111561008157600080fd5b803590602001918460018302840111640100000000831117156100a357600080fd5b91935091503515156100ff565b604080516001600160a01b039092168252519081900360200190f35b3480156100d857600080fd5b506100b0600480360360208110156100ef57600080fd5b50356001600160a01b0316610347565b60006001600160a01b03851661015c576040805162461bcd60e51b815260206004820181905260248201527f426f72696e67466163746f72793a204e6f206d6173746572436f6e7472616374604482015290519081900360640190fd5b606085901b82156101d357600085856040518083838082843760405192018290038220733d602d80600a3d3981f3363d3d373d3d3d363d7360601b8352601483018890526e5af43d82803e903d91602b57fd5bf360881b60288401529550909350849250603791508390506000f593505050610218565b604051733d602d80600a3d3981f3363d3d373d3d3d363d7360601b81528160148201526e5af43d82803e903d91602b57fd5bf360881b60288201526037816000f09250505b6001600160a01b038281166000818152602081815260409182902080546001600160a01b031916948b169490941790935551631377d1f560e21b815260048101928352602481018790529091634ddf47d491349189918991908190604401848480828437600081840152601f19601f82011690508083019250505093505050506000604051808303818588803b1580156102b157600080fd5b505af11580156102c5573d6000803e3d6000fd5b5050505050816001600160a01b0316866001600160a01b03167fd62166f3c2149208e51788b1401cc356bf5da1fc6c7886a32e18570f57d88b3b878760405180806020018281038252848482818152602001925080828437600083820152604051601f909101601f19169092018290039550909350505050a350949350505050565b6000602081905290815260409020546001600160a01b03168156fea264697066735822122087a9825f30745d21cdb34c23cecdc6a664fdba205e68d41acac7ddc9c2e6b45164736f6c634300060c0033",
+  "deployedSourceMap": "109:2449:65:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;886:1670;;;;;;;;;;;;;;;;-1:-1:-1;;;;;886:1670:65;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;886:1670:65;-1:-1:-1;886:1670:65;;;;:::i;:::-;;;;-1:-1:-1;;;;;886:1670:65;;;;;;;;;;;;;;304:51;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;304:51:65;-1:-1:-1;;;;;304:51:65;;:::i;886:1670::-;1018:20;-1:-1:-1;;;;;1058:28:65;;1050:73;;;;;-1:-1:-1;;;1050:73:65;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1155:23;;;;1249:1114;;;;1390:12;1415:4;;1405:15;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1622:81:65;;1738:4;1727:16;;1720:37;;;-1:-1:-1;;;1792:4:65;1781:16;;1774:92;1405:15;-1:-1:-1;1405:15:65;;-1:-1:-1;1405:15:65;;-1:-1:-1;1917:4:65;;-1:-1:-1;1405:15:65;;-1:-1:-1;;1899:29:65;1883:45;;;1563:379;;;;2018:4;2012:11;-1:-1:-1;;;2047:5:65;2040:81;2163:11;2156:4;2149:5;2145:16;2138:37;-1:-1:-1;;;2210:4:65;2203:5;2199:16;2192:92;2334:4;2327:5;2324:1;2317:22;2301:38;;;1981:372;-1:-1:-1;;;;;2372:30:65;;;:16;:30;;;;;;;;;;;;:47;;-1:-1:-1;;;;;;2372:47:65;;;;;;;;;;;2430:58;-1:-1:-1;;;2430:58:65;;;;;;;;;;;;;;2372:30;;2430:34;;2472:9;;2483:4;;2430:58;;;;;;;2483:4;2430:58;;2483:4;2430:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2536:12;-1:-1:-1;;;;;2504:45:65;2514:14;-1:-1:-1;;;;;2504:45:65;;2530:4;;2504:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;2504:45:65;;;;;;;;-1:-1:-1;2504:45:65;;-1:-1:-1;;;;2504:45:65;886:1670;;;;;;;:::o;304:51::-;;;;;;;;;;;;;-1:-1:-1;;;;;304:51:65;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {
+      "deploy(address,bytes,bool)": {
+        "notice": "Deploys a given master Contract as a clone. Any ETH transferred with this call is forwarded to the new clone. Emits `LogDeploy`.",
+        "params": {
+          "data": "Additional abi encoded calldata that is passed to the new clone via `IMasterContract.init`.",
+          "masterContract": "The address of the contract to clone.",
+          "useCreate2": "Creates the clone by using the CREATE2 opcode, in this case `data` will be used as salt."
+        },
+        "returns": {
+          "cloneAddress": "Address of the created clone contract."
+        }
+      },
+      "masterContractOf(address)": {
+        "notice": "Mapping from clone contracts to their masterContract."
+      }
+    },
+    "version": 1
+  },
+  "offset": [
+    109,
+    2558
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x29 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x1F54245B EQ PUSH2 0x2E JUMPI DUP1 PUSH4 0xBAFE4F14 EQ PUSH2 0xCC JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0xB0 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x60 DUP2 LT ISZERO PUSH2 0x44 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP3 CALLDATALOAD AND SWAP2 SWAP1 DUP2 ADD SWAP1 PUSH1 0x40 DUP2 ADD PUSH1 0x20 DUP3 ADD CALLDATALOAD PUSH5 0x100000000 DUP2 GT ISZERO PUSH2 0x6F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 ADD DUP4 PUSH1 0x20 DUP3 ADD GT ISZERO PUSH2 0x81 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP2 DUP5 PUSH1 0x1 DUP4 MUL DUP5 ADD GT PUSH5 0x100000000 DUP4 GT OR ISZERO PUSH2 0xA3 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP4 POP SWAP2 POP CALLDATALOAD ISZERO ISZERO PUSH2 0xFF JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xD8 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xB0 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0xEF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH2 0x347 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP6 AND PUSH2 0x15C JUMPI PUSH1 0x40 DUP1 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD DUP2 SWAP1 MSTORE PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x426F72696E67466163746F72793A204E6F206D6173746572436F6E7472616374 PUSH1 0x44 DUP3 ADD MSTORE SWAP1 MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x64 ADD SWAP1 REVERT JUMPDEST PUSH1 0x60 DUP6 SWAP1 SHL DUP3 ISZERO PUSH2 0x1D3 JUMPI PUSH1 0x0 DUP6 DUP6 PUSH1 0x40 MLOAD DUP1 DUP4 DUP4 DUP1 DUP3 DUP5 CALLDATACOPY PUSH1 0x40 MLOAD SWAP3 ADD DUP3 SWAP1 SUB DUP3 KECCAK256 PUSH20 0x3D602D80600A3D3981F3363D3D373D3D3D363D73 PUSH1 0x60 SHL DUP4 MSTORE PUSH1 0x14 DUP4 ADD DUP9 SWAP1 MSTORE PUSH15 0x5AF43D82803E903D91602B57FD5BF3 PUSH1 0x88 SHL PUSH1 0x28 DUP5 ADD MSTORE SWAP6 POP SWAP1 SWAP4 POP DUP5 SWAP3 POP PUSH1 0x37 SWAP2 POP DUP4 SWAP1 POP PUSH1 0x0 CREATE2 SWAP4 POP POP POP PUSH2 0x218 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH20 0x3D602D80600A3D3981F3363D3D373D3D3D363D73 PUSH1 0x60 SHL DUP2 MSTORE DUP2 PUSH1 0x14 DUP3 ADD MSTORE PUSH15 0x5AF43D82803E903D91602B57FD5BF3 PUSH1 0x88 SHL PUSH1 0x28 DUP3 ADD MSTORE PUSH1 0x37 DUP2 PUSH1 0x0 CREATE SWAP3 POP POP JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP3 DUP2 AND PUSH1 0x0 DUP2 DUP2 MSTORE PUSH1 0x20 DUP2 DUP2 MSTORE PUSH1 0x40 SWAP2 DUP3 SWAP1 KECCAK256 DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND SWAP5 DUP12 AND SWAP5 SWAP1 SWAP5 OR SWAP1 SWAP4 SSTORE MLOAD PUSH4 0x1377D1F5 PUSH1 0xE2 SHL DUP2 MSTORE PUSH1 0x4 DUP2 ADD SWAP3 DUP4 MSTORE PUSH1 0x24 DUP2 ADD DUP8 SWAP1 MSTORE SWAP1 SWAP2 PUSH4 0x4DDF47D4 SWAP2 CALLVALUE SWAP2 DUP10 SWAP2 DUP10 SWAP2 SWAP1 DUP2 SWAP1 PUSH1 0x44 ADD DUP5 DUP5 DUP1 DUP3 DUP5 CALLDATACOPY PUSH1 0x0 DUP2 DUP5 ADD MSTORE PUSH1 0x1F NOT PUSH1 0x1F DUP3 ADD AND SWAP1 POP DUP1 DUP4 ADD SWAP3 POP POP POP SWAP4 POP POP POP POP PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 DUP6 DUP9 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x2B1 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x2C5 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP POP DUP2 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP7 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH32 0xD62166F3C2149208E51788B1401CC356BF5DA1FC6C7886A32E18570F57D88B3B DUP8 DUP8 PUSH1 0x40 MLOAD DUP1 DUP1 PUSH1 0x20 ADD DUP3 DUP2 SUB DUP3 MSTORE DUP5 DUP5 DUP3 DUP2 DUP2 MSTORE PUSH1 0x20 ADD SWAP3 POP DUP1 DUP3 DUP5 CALLDATACOPY PUSH1 0x0 DUP4 DUP3 ADD MSTORE PUSH1 0x40 MLOAD PUSH1 0x1F SWAP1 SWAP2 ADD PUSH1 0x1F NOT AND SWAP1 SWAP3 ADD DUP3 SWAP1 SUB SWAP6 POP SWAP1 SWAP4 POP POP POP POP LOG3 POP SWAP5 SWAP4 POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP2 SWAP1 MSTORE SWAP1 DUP2 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP8 0xA9 DUP3 0x5F ADDRESS PUSH21 0x5D21CDB34C23CECDC6A664FDBA205E68D41ACAC7DD 0xC9 0xC2 0xE6 0xB4 MLOAD PUSH5 0x736F6C6343 STOP MOD 0xC STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "CALLDATASIZE",
+      "path": "65"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "LT",
+      "path": "65"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x29"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "CALLDATALOAD",
+      "path": "65"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0xE0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "SHR",
+      "path": "65"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH4",
+      "path": "65",
+      "value": "0x1F54245B"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "EQ",
+      "path": "65"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x2E"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH4",
+      "path": "65",
+      "value": "0xBAFE4F14"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "EQ",
+      "path": "65"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0xCC"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "45": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        109,
+        2558
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "46": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "47": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0xB0"
+    },
+    "50": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x4"
+    },
+    "52": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "53": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "CALLDATASIZE",
+      "path": "65"
+    },
+    "54": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SUB",
+      "path": "65"
+    },
+    "55": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x60"
+    },
+    "57": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "58": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "LT",
+      "path": "65"
+    },
+    "59": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "60": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x44"
+    },
+    "63": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "64": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "66": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "67": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "68": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "69": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "71": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "73": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "75": {
+      "op": "SHL"
+    },
+    "76": {
+      "op": "SUB"
+    },
+    "77": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "78": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "CALLDATALOAD",
+      "path": "65"
+    },
+    "79": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "80": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "81": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "82": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "83": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "84": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "85": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "87": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "88": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "89": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "91": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "92": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "93": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "CALLDATALOAD",
+      "path": "65"
+    },
+    "94": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH5",
+      "path": "65",
+      "value": "0x100000000"
+    },
+    "100": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "101": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "GT",
+      "path": "65"
+    },
+    "102": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "103": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x6F"
+    },
+    "106": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "107": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "109": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "110": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "111": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "112": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "113": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "114": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "115": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "117": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "118": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "119": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "GT",
+      "path": "65"
+    },
+    "120": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "121": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x81"
+    },
+    "124": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "125": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "127": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "128": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "129": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "130": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "131": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "CALLDATALOAD",
+      "path": "65"
+    },
+    "132": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "133": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "135": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "136": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "137": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "138": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x1"
+    },
+    "140": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "141": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "MUL",
+      "path": "65"
+    },
+    "142": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "143": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "144": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "GT",
+      "path": "65"
+    },
+    "145": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH5",
+      "path": "65",
+      "value": "0x100000000"
+    },
+    "151": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "152": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "GT",
+      "path": "65"
+    },
+    "153": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "OR",
+      "path": "65"
+    },
+    "154": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "155": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0xA3"
+    },
+    "158": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "159": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "161": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "162": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "163": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "164": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "165": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP4",
+      "path": "65"
+    },
+    "166": {
+      "op": "POP"
+    },
+    "167": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "168": {
+      "op": "POP"
+    },
+    "169": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "CALLDATALOAD",
+      "path": "65"
+    },
+    "170": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "171": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "172": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0xFF"
+    },
+    "175": {
+      "fn": "BoringFactory.deploy",
+      "jump": "i",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMP",
+      "path": "65"
+    },
+    "176": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "177": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "179": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "180": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "181": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "183": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "185": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "187": {
+      "op": "SHL"
+    },
+    "188": {
+      "op": "SUB"
+    },
+    "189": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "190": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP3",
+      "path": "65"
+    },
+    "191": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "192": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "193": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "194": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "195": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "196": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "197": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "198": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SUB",
+      "path": "65"
+    },
+    "199": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "201": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "202": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "203": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "RETURN",
+      "path": "65"
+    },
+    "204": {
+      "offset": [
+        304,
+        355
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "205": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "CALLVALUE",
+      "path": "65"
+    },
+    "206": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "207": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "208": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0xD8"
+    },
+    "211": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "212": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "214": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "215": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "216": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "217": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "218": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0xB0"
+    },
+    "221": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x4"
+    },
+    "223": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "224": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "CALLDATASIZE",
+      "path": "65"
+    },
+    "225": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "SUB",
+      "path": "65"
+    },
+    "226": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "228": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "229": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "LT",
+      "path": "65"
+    },
+    "230": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "231": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0xEF"
+    },
+    "234": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "235": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "237": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "238": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "239": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "240": {
+      "op": "POP"
+    },
+    "241": {
+      "offset": [
+        304,
+        355
+      ],
+      "op": "CALLDATALOAD",
+      "path": "65"
+    },
+    "242": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "244": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "246": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "248": {
+      "op": "SHL"
+    },
+    "249": {
+      "op": "SUB"
+    },
+    "250": {
+      "offset": [
+        304,
+        355
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "251": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x347"
+    },
+    "254": {
+      "fn": "BoringFactory.deploy",
+      "jump": "i",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "JUMP",
+      "path": "65"
+    },
+    "255": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "256": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1018,
+        1038
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "258": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "260": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "262": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "264": {
+      "op": "SHL"
+    },
+    "265": {
+      "op": "SUB"
+    },
+    "266": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1058,
+        1086
+      ],
+      "op": "DUP6",
+      "path": "65",
+      "statement": 0
+    },
+    "267": {
+      "branch": 5,
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1058,
+        1086
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "268": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x15C"
+    },
+    "271": {
+      "branch": 5,
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "272": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "274": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "275": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "276": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "280": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "282": {
+      "op": "SHL"
+    },
+    "283": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "284": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "285": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "287": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x4"
+    },
+    "289": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "290": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "291": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "292": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "293": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "294": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x24"
+    },
+    "296": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "297": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "298": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "299": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "PUSH32",
+      "path": "65",
+      "value": "0x426F72696E67466163746F72793A204E6F206D6173746572436F6E7472616374"
+    },
+    "332": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x44"
+    },
+    "334": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "335": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "336": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "337": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "338": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "339": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "340": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "341": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "342": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "SUB",
+      "path": "65"
+    },
+    "343": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x64"
+    },
+    "345": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "346": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "347": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "348": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1050,
+        1123
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "349": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1155,
+        1178
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x60"
+    },
+    "351": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1155,
+        1178
+      ],
+      "op": "DUP6",
+      "path": "65"
+    },
+    "352": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1155,
+        1178
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "353": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1155,
+        1178
+      ],
+      "op": "SHL",
+      "path": "65"
+    },
+    "354": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1249,
+        2363
+      ],
+      "op": "DUP3",
+      "path": "65",
+      "statement": 1
+    },
+    "355": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1249,
+        2363
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "356": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1249,
+        2363
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x1D3"
+    },
+    "359": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1249,
+        2363
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "360": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1390,
+        1402
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "362": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1415,
+        1419
+      ],
+      "op": "DUP6",
+      "path": "65"
+    },
+    "363": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1415,
+        1419
+      ],
+      "op": "DUP6",
+      "path": "65"
+    },
+    "364": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "366": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "367": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "368": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "369": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "370": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "371": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "372": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "373": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "CALLDATACOPY",
+      "path": "65"
+    },
+    "374": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "376": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "377": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "SWAP3",
+      "path": "65"
+    },
+    "378": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "379": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "380": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "381": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "SUB",
+      "path": "65"
+    },
+    "382": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "383": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "KECCAK256",
+      "path": "65"
+    },
+    "384": {
+      "op": "PUSH20",
+      "value": "0x3D602D80600A3D3981F3363D3D373D3D3D363D73"
+    },
+    "405": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "407": {
+      "op": "SHL"
+    },
+    "408": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1622,
+        1703
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "409": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1622,
+        1703
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "410": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1738,
+        1742
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x14"
+    },
+    "412": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1727,
+        1743
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "413": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1727,
+        1743
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "414": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1720,
+        1757
+      ],
+      "op": "DUP9",
+      "path": "65"
+    },
+    "415": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1720,
+        1757
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "416": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1720,
+        1757
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "417": {
+      "op": "PUSH15",
+      "value": "0x5AF43D82803E903D91602B57FD5BF3"
+    },
+    "433": {
+      "op": "PUSH1",
+      "value": "0x88"
+    },
+    "435": {
+      "op": "SHL"
+    },
+    "436": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1792,
+        1796
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x28"
+    },
+    "438": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1781,
+        1797
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "439": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1781,
+        1797
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "440": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1774,
+        1866
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "441": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "SWAP6",
+      "path": "65"
+    },
+    "442": {
+      "op": "POP"
+    },
+    "443": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "444": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "SWAP4",
+      "path": "65"
+    },
+    "445": {
+      "op": "POP"
+    },
+    "446": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "447": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "SWAP3",
+      "path": "65"
+    },
+    "448": {
+      "op": "POP"
+    },
+    "449": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1917,
+        1921
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x37"
+    },
+    "451": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1917,
+        1921
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "452": {
+      "op": "POP"
+    },
+    "453": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "454": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1405,
+        1420
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "455": {
+      "op": "POP"
+    },
+    "456": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "458": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1899,
+        1928
+      ],
+      "op": "CREATE2",
+      "path": "65"
+    },
+    "459": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1883,
+        1928
+      ],
+      "op": "SWAP4",
+      "path": "65"
+    },
+    "460": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1883,
+        1928
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "461": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1883,
+        1928
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "462": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1563,
+        1942
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "463": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1563,
+        1942
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x218"
+    },
+    "466": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1563,
+        1942
+      ],
+      "op": "JUMP",
+      "path": "65"
+    },
+    "467": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1563,
+        1942
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "468": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2018,
+        2022
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "470": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2012,
+        2023
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "471": {
+      "op": "PUSH20",
+      "value": "0x3D602D80600A3D3981F3363D3D373D3D3D363D73"
+    },
+    "492": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "494": {
+      "op": "SHL"
+    },
+    "495": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2047,
+        2052
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "496": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2040,
+        2121
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "497": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2163,
+        2174
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "498": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2156,
+        2160
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x14"
+    },
+    "500": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2149,
+        2154
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "501": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2145,
+        2161
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "502": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2138,
+        2175
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "503": {
+      "op": "PUSH15",
+      "value": "0x5AF43D82803E903D91602B57FD5BF3"
+    },
+    "519": {
+      "op": "PUSH1",
+      "value": "0x88"
+    },
+    "521": {
+      "op": "SHL"
+    },
+    "522": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2210,
+        2214
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x28"
+    },
+    "524": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2203,
+        2208
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "525": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2199,
+        2215
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "526": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2192,
+        2284
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "527": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2334,
+        2338
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x37"
+    },
+    "529": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2327,
+        2332
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "530": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2324,
+        2325
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "532": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2317,
+        2339
+      ],
+      "op": "CREATE",
+      "path": "65"
+    },
+    "533": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2301,
+        2339
+      ],
+      "op": "SWAP3",
+      "path": "65"
+    },
+    "534": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2301,
+        2339
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "535": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2301,
+        2339
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "536": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        1981,
+        2353
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "537": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "539": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "541": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "543": {
+      "op": "SHL"
+    },
+    "544": {
+      "op": "SUB"
+    },
+    "545": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "DUP3",
+      "path": "65",
+      "statement": 2
+    },
+    "546": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "547": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "548": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2388
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "550": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "551": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "552": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "553": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "555": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "556": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "557": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "558": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "560": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "561": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "562": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "563": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "KECCAK256",
+      "path": "65"
+    },
+    "564": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "565": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "SLOAD",
+      "path": "65"
+    },
+    "566": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "568": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "570": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "572": {
+      "op": "SHL"
+    },
+    "573": {
+      "op": "SUB"
+    },
+    "574": {
+      "op": "NOT"
+    },
+    "575": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "576": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "SWAP5",
+      "path": "65"
+    },
+    "577": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "DUP12",
+      "path": "65"
+    },
+    "578": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "579": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "SWAP5",
+      "path": "65"
+    },
+    "580": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "581": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "SWAP5",
+      "path": "65"
+    },
+    "582": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "OR",
+      "path": "65"
+    },
+    "583": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "584": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "SWAP4",
+      "path": "65"
+    },
+    "585": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2419
+      ],
+      "op": "SSTORE",
+      "path": "65"
+    },
+    "586": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "MLOAD",
+      "path": "65",
+      "statement": 3
+    },
+    "587": {
+      "op": "PUSH4",
+      "value": "0x1377D1F5"
+    },
+    "592": {
+      "op": "PUSH1",
+      "value": "0xE2"
+    },
+    "594": {
+      "op": "SHL"
+    },
+    "595": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "596": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "597": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x4"
+    },
+    "599": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "600": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "601": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SWAP3",
+      "path": "65"
+    },
+    "602": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "603": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "604": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x24"
+    },
+    "606": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "607": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "608": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP8",
+      "path": "65"
+    },
+    "609": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "610": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "611": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "612": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2372,
+        2402
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "613": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2464
+      ],
+      "op": "PUSH4",
+      "path": "65",
+      "value": "0x4DDF47D4"
+    },
+    "618": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2464
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "619": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2472,
+        2481
+      ],
+      "op": "CALLVALUE",
+      "path": "65"
+    },
+    "620": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2472,
+        2481
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "621": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2483,
+        2487
+      ],
+      "op": "DUP10",
+      "path": "65"
+    },
+    "622": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2483,
+        2487
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "623": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP10",
+      "path": "65"
+    },
+    "624": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "625": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "626": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "627": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "628": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x44"
+    },
+    "630": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "631": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2483,
+        2487
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "632": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "633": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "634": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2483,
+        2487
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "635": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "636": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "CALLDATACOPY",
+      "path": "65"
+    },
+    "637": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "639": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "640": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "641": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "642": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "643": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x1F"
+    },
+    "645": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "NOT",
+      "path": "65"
+    },
+    "646": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x1F"
+    },
+    "648": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "649": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "650": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "651": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "652": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "653": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "654": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "655": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "656": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SWAP3",
+      "path": "65"
+    },
+    "657": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "658": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "659": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "660": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SWAP4",
+      "path": "65"
+    },
+    "661": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "662": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "663": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "664": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "665": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "667": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "669": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "670": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "671": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "672": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "SUB",
+      "path": "65"
+    },
+    "673": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "674": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP6",
+      "path": "65"
+    },
+    "675": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP9",
+      "path": "65"
+    },
+    "676": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "677": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "EXTCODESIZE",
+      "path": "65"
+    },
+    "678": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "679": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "680": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "681": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x2B1"
+    },
+    "684": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "685": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "687": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "688": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "689": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "690": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "691": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "GAS",
+      "path": "65"
+    },
+    "692": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "CALL",
+      "path": "65"
+    },
+    "693": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "694": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "695": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "ISZERO",
+      "path": "65"
+    },
+    "696": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH2",
+      "path": "65",
+      "value": "0x2C5"
+    },
+    "699": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "JUMPI",
+      "path": "65"
+    },
+    "700": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "65"
+    },
+    "701": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "703": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "704": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "65"
+    },
+    "705": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "65"
+    },
+    "706": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "708": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "REVERT",
+      "path": "65"
+    },
+    "709": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "710": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "711": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "712": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "713": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "714": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2430,
+        2488
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "715": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2536,
+        2548
+      ],
+      "op": "DUP2",
+      "path": "65",
+      "statement": 4
+    },
+    "716": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "718": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "720": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "722": {
+      "op": "SHL"
+    },
+    "723": {
+      "op": "SUB"
+    },
+    "724": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "725": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2514,
+        2528
+      ],
+      "op": "DUP7",
+      "path": "65"
+    },
+    "726": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "728": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "730": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "732": {
+      "op": "SHL"
+    },
+    "733": {
+      "op": "SUB"
+    },
+    "734": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "735": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "PUSH32",
+      "path": "65",
+      "value": "0xD62166F3C2149208E51788B1401CC356BF5DA1FC6C7886A32E18570F57D88B3B"
+    },
+    "768": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2530,
+        2534
+      ],
+      "op": "DUP8",
+      "path": "65"
+    },
+    "769": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2530,
+        2534
+      ],
+      "op": "DUP8",
+      "path": "65"
+    },
+    "770": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "772": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "773": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "774": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "775": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "777": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "778": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "779": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "780": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SUB",
+      "path": "65"
+    },
+    "781": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "782": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "783": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "784": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "785": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "786": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "787": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "788": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "789": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "791": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "792": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP3",
+      "path": "65"
+    },
+    "793": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "794": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP1",
+      "path": "65"
+    },
+    "795": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "796": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP5",
+      "path": "65"
+    },
+    "797": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "CALLDATACOPY",
+      "path": "65"
+    },
+    "798": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "800": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP4",
+      "path": "65"
+    },
+    "801": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "802": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "803": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "804": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "806": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "MLOAD",
+      "path": "65"
+    },
+    "807": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x1F"
+    },
+    "809": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "810": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP2",
+      "path": "65"
+    },
+    "811": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "812": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "814": {
+      "op": "NOT"
+    },
+    "815": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "816": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "817": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP3",
+      "path": "65"
+    },
+    "818": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "ADD",
+      "path": "65"
+    },
+    "819": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "DUP3",
+      "path": "65"
+    },
+    "820": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "821": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SUB",
+      "path": "65"
+    },
+    "822": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP6",
+      "path": "65"
+    },
+    "823": {
+      "op": "POP"
+    },
+    "824": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "825": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "SWAP4",
+      "path": "65"
+    },
+    "826": {
+      "op": "POP"
+    },
+    "827": {
+      "op": "POP"
+    },
+    "828": {
+      "op": "POP"
+    },
+    "829": {
+      "op": "POP"
+    },
+    "830": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        2504,
+        2549
+      ],
+      "op": "LOG3",
+      "path": "65"
+    },
+    "831": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "832": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP5",
+      "path": "65"
+    },
+    "833": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "SWAP4",
+      "path": "65"
+    },
+    "834": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "835": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "836": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "837": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "POP",
+      "path": "65"
+    },
+    "838": {
+      "fn": "BoringFactory.deploy",
+      "jump": "o",
+      "offset": [
+        886,
+        2556
+      ],
+      "op": "JUMP",
+      "path": "65"
+    },
+    "839": {
+      "offset": [
+        304,
+        355
+      ],
+      "op": "JUMPDEST",
+      "path": "65"
+    },
+    "840": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x0"
+    },
+    "842": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x20"
+    },
+    "844": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "845": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "846": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "847": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "848": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "849": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "MSTORE",
+      "path": "65"
+    },
+    "850": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "PUSH1",
+      "path": "65",
+      "value": "0x40"
+    },
+    "852": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "SWAP1",
+      "path": "65"
+    },
+    "853": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "KECCAK256",
+      "path": "65"
+    },
+    "854": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "SLOAD",
+      "path": "65"
+    },
+    "855": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "857": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "859": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "861": {
+      "op": "SHL"
+    },
+    "862": {
+      "op": "SUB"
+    },
+    "863": {
+      "offset": [
+        304,
+        355
+      ],
+      "op": "AND",
+      "path": "65"
+    },
+    "864": {
+      "fn": "BoringFactory.deploy",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "DUP2",
+      "path": "65"
+    },
+    "865": {
+      "fn": "BoringFactory.deploy",
+      "jump": "o",
+      "offset": [
+        304,
+        355
+      ],
+      "op": "JUMP",
+      "path": "65"
+    }
+  },
+  "sha1": "bcefe32cf3f909a57b29faef31bf6585d87bbf26",
+  "source": "\npragma solidity 0.6.12;\nimport \"../interfaces/IMasterContract.sol\";\n\n// solhint-disable no-inline-assembly\n\ncontract BoringFactory {\n    event LogDeploy(address indexed masterContract, bytes data, address indexed cloneAddress);\n\n    /// @notice Mapping from clone contracts to their masterContract.\n    mapping(address => address) public masterContractOf;\n\n    /// @notice Deploys a given master Contract as a clone.\n    /// Any ETH transferred with this call is forwarded to the new clone.\n    /// Emits `LogDeploy`.\n    /// @param masterContract The address of the contract to clone.\n    /// @param data Additional abi encoded calldata that is passed to the new clone via `IMasterContract.init`.\n    /// @param useCreate2 Creates the clone by using the CREATE2 opcode, in this case `data` will be used as salt.\n    /// @return cloneAddress Address of the created clone contract.\n    function deploy(\n        address masterContract,\n        bytes calldata data,\n        bool useCreate2\n    ) public payable returns (address cloneAddress) {\n        require(masterContract != address(0), \"BoringFactory: No masterContract\");\n        bytes20 targetBytes = bytes20(masterContract); // Takes the first 20 bytes of the masterContract's address\n\n        if (useCreate2) {\n            // each masterContract has different code already. So clones are distinguished by their data only.\n            bytes32 salt = keccak256(data);\n\n            // Creates clone, more info here: https://blog.openzeppelin.com/deep-dive-into-the-minimal-proxy-contract/\n            assembly {\n                let clone := mload(0x40)\n                mstore(clone, 0x3d602d80600a3d3981f3363d3d373d3d3d363d73000000000000000000000000)\n                mstore(add(clone, 0x14), targetBytes)\n                mstore(add(clone, 0x28), 0x5af43d82803e903d91602b57fd5bf30000000000000000000000000000000000)\n                cloneAddress := create2(0, clone, 0x37, salt)\n            }\n        } else {\n            assembly {\n                let clone := mload(0x40)\n                mstore(clone, 0x3d602d80600a3d3981f3363d3d373d3d3d363d73000000000000000000000000)\n                mstore(add(clone, 0x14), targetBytes)\n                mstore(add(clone, 0x28), 0x5af43d82803e903d91602b57fd5bf30000000000000000000000000000000000)\n                cloneAddress := create(0, clone, 0x37)\n            }\n        }\n        masterContractOf[cloneAddress] = masterContract;\n\n        IMasterContract(cloneAddress).init{value: msg.value}(data);\n\n        emit LogDeploy(masterContract, data, cloneAddress);\n    }\n}",
+  "sourceMap": "109:2449:65:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/Utils/BoringFactory.sol",
+  "type": "contract"
+}

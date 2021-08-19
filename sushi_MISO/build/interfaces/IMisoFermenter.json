@@ -1,0 +1,91 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "initERC20Vault",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IMisoFermenter.sol",
+    "exportedSymbols": {
+      "IMisoFermenter": [
+        299
+      ]
+    },
+    "id": 300,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 295,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 299,
+        "linearizedBaseContracts": [
+          299
+        ],
+        "name": "IMisoFermenter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "4c462771",
+            "id": 298,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initERC20Vault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 296,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "79:2:10"
+            },
+            "returnParameters": {
+              "id": 297,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "90:0:10"
+            },
+            "scope": 299,
+            "src": "56:35:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 300,
+        "src": "25:68:10"
+      }
+    ],
+    "src": "0:93:10"
+  },
+  "contractName": "IMisoFermenter",
+  "dependencies": [],
+  "offset": [
+    25,
+    93
+  ],
+  "sha1": "34f95b3564572fe74292d91089f44a6be4bf3b00",
+  "source": "pragma solidity 0.6.12;\n\ninterface IMisoFermenter {\n    function initERC20Vault() external;\n}",
+  "type": "interface"
+}

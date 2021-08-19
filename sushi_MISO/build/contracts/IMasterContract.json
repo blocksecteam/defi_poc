@@ -1,0 +1,167 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "init",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "80": "contracts/interfaces/IMasterContract.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IMasterContract.sol",
+    "exportedSymbols": {
+      "IMasterContract": [
+        30377
+      ]
+    },
+    "id": 30378,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 30370,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:80"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 30377,
+        "linearizedBaseContracts": [
+          30377
+        ],
+        "name": "IMasterContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 30371,
+              "nodeType": "StructuredDocumentation",
+              "src": "57:258:80",
+              "text": "@notice Init function that gets called from `BoringFactory.deploy`.\n Also kown as the constructor for cloned contracts.\n Any ETH send to `BoringFactory.deploy` ends up here.\n @param data Can be abi encoded arguments or anything else."
+            },
+            "functionSelector": "4ddf47d4",
+            "id": 30376,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "init",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 30374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30373,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 30376,
+                  "src": "334:19:80",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30372,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:5:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:21:80"
+            },
+            "returnParameters": {
+              "id": 30375,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "371:0:80"
+            },
+            "scope": 30377,
+            "src": "320:52:80",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 30378,
+        "src": "25:349:80"
+      }
+    ],
+    "src": "0:374:80"
+  },
+  "bytecode": "",
+  "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "IMasterContract",
+  "coverageMap": {
+    "branches": {},
+    "statements": {}
+  },
+  "dependencies": [],
+  "deployedBytecode": "",
+  "deployedSourceMap": "",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {
+      "init(bytes)": {
+        "notice": "Init function that gets called from `BoringFactory.deploy`. Also kown as the constructor for cloned contracts. Any ETH send to `BoringFactory.deploy` ends up here.",
+        "params": {
+          "data": "Can be abi encoded arguments or anything else."
+        }
+      }
+    },
+    "version": 1
+  },
+  "offset": [
+    25,
+    374
+  ],
+  "opcodes": "",
+  "pcMap": {},
+  "sha1": "7d09c0708b487383d3558cef05798dc3e78a3998",
+  "source": "pragma solidity 0.6.12;\n\ninterface IMasterContract {\n    /// @notice Init function that gets called from `BoringFactory.deploy`.\n    /// Also kown as the constructor for cloned contracts.\n    /// Any ETH send to `BoringFactory.deploy` ends up here.\n    /// @param data Can be abi encoded arguments or anything else.\n    function init(bytes calldata data) external payable;\n}",
+  "sourceMap": "",
+  "sourcePath": "contracts/interfaces/IMasterContract.sol",
+  "type": "interface"
+}

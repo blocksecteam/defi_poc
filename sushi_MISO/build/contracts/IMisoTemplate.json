@@ -1,0 +1,155 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "initData",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "88": "contracts/interfaces/IMisoTemplate.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IMisoTemplate.sol",
+    "exportedSymbols": {
+      "IMisoTemplate": [
+        30540
+      ]
+    },
+    "id": 30541,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 30534,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:88"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 30540,
+        "linearizedBaseContracts": [
+          30540
+        ],
+        "name": "IMisoTemplate",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "ab82a116",
+            "id": 30539,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 30537,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30536,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 30539,
+                  "src": "82:19:88",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30535,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "82:5:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "72:35:88"
+            },
+            "returnParameters": {
+              "id": 30538,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "116:0:88"
+            },
+            "scope": 30540,
+            "src": "55:62:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 30541,
+        "src": "25:94:88"
+      }
+    ],
+    "src": "0:119:88"
+  },
+  "bytecode": "",
+  "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "IMisoTemplate",
+  "coverageMap": {
+    "branches": {},
+    "statements": {}
+  },
+  "dependencies": [],
+  "deployedBytecode": "",
+  "deployedSourceMap": "",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    25,
+    119
+  ],
+  "opcodes": "",
+  "pcMap": {},
+  "sha1": "05972465a98c9663ba535603f75ad81b26151cfd",
+  "source": "pragma solidity 0.6.12;\n\ninterface IMisoTemplate {\n    function initData(\n        bytes calldata data\n    ) external;\n}",
+  "sourceMap": "",
+  "sourcePath": "contracts/interfaces/IMisoTemplate.sol",
+  "type": "interface"
+}

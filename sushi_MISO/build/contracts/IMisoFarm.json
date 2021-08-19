@@ -1,0 +1,226 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "farmTemplate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "initFarm",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "83": "contracts/interfaces/IMisoFarm.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IMisoFarm.sol",
+    "exportedSymbols": {
+      "IMisoFarm": [
+        30482
+      ]
+    },
+    "id": 30483,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 30471,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:83"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 30482,
+        "linearizedBaseContracts": [
+          30482
+        ],
+        "name": "IMisoFarm",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "824fa821",
+            "id": 30476,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initFarm",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 30474,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30473,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 30476,
+                  "src": "79:19:83",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30472,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "79:5:83",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "69:35:83"
+            },
+            "returnParameters": {
+              "id": 30475,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "113:0:83"
+            },
+            "scope": 30482,
+            "src": "52:62:83",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "2c77f656",
+            "id": 30481,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "farmTemplate",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 30477,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "140:2:83"
+            },
+            "returnParameters": {
+              "id": 30480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30479,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 30481,
+                  "src": "166:7:83",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30478,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "166:7:83",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "165:9:83"
+            },
+            "scope": 30482,
+            "src": "119:56:83",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 30483,
+        "src": "25:153:83"
+      }
+    ],
+    "src": "0:178:83"
+  },
+  "bytecode": "",
+  "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "IMisoFarm",
+  "coverageMap": {
+    "branches": {},
+    "statements": {}
+  },
+  "dependencies": [],
+  "deployedBytecode": "",
+  "deployedSourceMap": "",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    25,
+    178
+  ],
+  "opcodes": "",
+  "pcMap": {},
+  "sha1": "c1b398ebb1db76fb8810eef3d1b33c6c93f6672d",
+  "source": "pragma solidity 0.6.12;\n\ninterface IMisoFarm {\n\n    function initFarm(\n        bytes calldata data\n    ) external;\n    function farmTemplate() external view returns (uint256);\n\n}",
+  "sourceMap": "",
+  "sourcePath": "contracts/interfaces/IMisoFarm.sol",
+  "type": "interface"
+}
