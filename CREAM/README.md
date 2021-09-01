@@ -1,4 +1,4 @@
-# MISO
+# CREAM PoC
 
 ## How to run
 
