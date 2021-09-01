@@ -49,7 +49,7 @@ Transaction sent: 0x3a0c24d208738c9d21bc75aaa607b10e2e02adab2cd8021ccc280e61471f
 🧛 After:  profit is 224.9846920640469 WETH
 ```
 
-In the poc, we show two methods to obtain the profits.
+In the PoC, we demostrate two different methods to obtain the profits.
 
 * Method 1: swapping the whole AMP tokens in DEX
 * Method 2: 1/2 AMP for Liquidation and 1/2 AMP for swapping in DEX
