@@ -34,6 +34,7 @@ Transaction sent: 0x9af371e792238e1c68882b9057296d5a3c28e48a1df8163f05b1f878072d
   Luck deployed at: 0xE7eD6747FaC5360f88a2EFC03E00d25789F69291
 
 Before The YUSD's price in cream.finance oracle: 279300989383783
+
 Transaction sent: 0x3a1265b942688707f81cbd3adf420db3b81ae8fff0768696c9f84bcc4f367b45
   Gas price: 0.0 gwei   Gas limit: 880000000000   Nonce: 3
   Luck.luck confirmed   Block: 13499800   Gas used: 28578950 (0.00%)
