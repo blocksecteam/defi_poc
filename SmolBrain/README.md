@@ -22,3 +22,9 @@ Compiled 3 Solidity files successfully
 🥷 The holder of the NFT before the attack: 0xd3FeeDc8E702A9F191737c0482b685b74Be48CFa
 🧛 The holder of the NFT after the attack: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 ```
+
+---
+
+## link
+
+- [https://twitter.com/BlockSecTeam/status/1499321063372898304](https://twitter.com/BlockSecTeam/status/1499321063372898304)
